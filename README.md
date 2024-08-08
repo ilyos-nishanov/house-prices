@@ -36,5 +36,9 @@ max      755000.0
 ```
 
 So we have 1460 data points (some of them will be truncated of course). Mean price is $180K with standard deviation of $79K, which means our data is pretty skewed. This also can be seen in the graph price-dist.png.
-
-
+Data type distribution is as follows:
+```
+object: 43
+int64: 35
+float64: 3
+```
