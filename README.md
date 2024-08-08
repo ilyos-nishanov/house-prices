@@ -42,3 +42,37 @@ object: 43
 int64: 35
 float64: 3
 ```
+We need to transform the dataframe by encoding the categorical aka objec data type columns.
+
+### cleaning data
+Data cleaning in our case involved the following:
+- doin away with outlier data points
+- dropping attributes with too many null values
+- dropping attributes with too high correlation with each other (dropped one of them)
+We were able to spot the outliers by looking at their graphs individually agains SalePrice. In that manner we found these data points with exceptional values
+```
+[598, 955, 935, 1299, 250, 314, 336, 707, 379, 1183, 692, 186, 441, 186, 524, 739, 598, 955, 636, 1062, 1191, 496, 198, 1338]
+```
+and concequently deleted them from our data frame.
+
+Following columns had too many Null values:
+```
+PoolQC          1435
+MiscFeature     1388
+Alley           1350
+Fence           1162
+MasVnrType       861
+FireplaceQu      684
+LotFrontage      255
+```
+thus were dropped.
+
+Following attributes had too high correlation thus were eliminated:
+```
+GarageCars   GarageArea      0.885534
+GrLivArea    TotRmsAbvGrd    0.831634
+
+['GarageCars', 'TotRmsAbvGrd'] were gone
+```
+
+
