@@ -74,5 +74,20 @@ GrLivArea    TotRmsAbvGrd    0.831634
 
 ['GarageCars', 'TotRmsAbvGrd'] were gone
 ```
+### encoding categorical data
+Our data frame initially had 43 attributes of categorical nature. we used ordinal and one hot encodings to build corresponding pipelines (num_pipline, ode_pipelin, and ohe_pipeline) in order to transform them into numeric columns
+For
+```
+['LotShape', 'LandContour','Utilities','LandSlope',  'BsmtQual',  'BsmtFinType1',  'CentralAir',  'Functional', \
+           'FireplaceQu', 'GarageFinish', 'GarageQual', 'PavedDrive', 'ExterCond', 'KitchenQual', 'BsmtExposure', 'HeatingQC','ExterQual', 'BsmtCond']
+```
+we used ordinal encoding becuase these attributes capture more or less (deffinitely) values of some order. For example BsmtQual has great, nice, and stinky values which deffinitely capture order.
+
+For
+```
+['Street', 'LotConfig','Neighborhood', 'Condition1', 'Condition2', 'BldgType', 'HouseStyle', 'RoofStyle', 'Exterior1st', 'Exterior2nd', \
+           'MasVnrType','Foundation',  'Electrical',  'SaleType', 'MSZoning', 'SaleCondition', 'Heating', 'GarageType', 'RoofMatl']
+```
+one hot encoding was used for the same opposite reason
 
 
