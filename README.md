@@ -19,6 +19,22 @@ data is read to pandas using .read_csv() method. train.csv contains data points 
 
 ### descriptive analytics
 ```
-train_df['SalePrice'].describe()
+train_df['SalePrice'].describe().round()
 ```
+produces:
+
+```
+count      1460.0
+mean     180921.0
+std       79443.0
+min       34900.0
+25%      129975.0
+50%      163000.0
+75%      214000.0
+max      755000.0
+
+```
+
+So we have 1460 data points (some of them will be truncated of course). Mean price is $180K with standard deviation of $79K, which means our data is pretty skewed. This also can be seen in the graph price-dist.png.
+
 
